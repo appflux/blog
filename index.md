@@ -6,12 +6,18 @@ layout: default
 ---
 
 {% for post in site.posts %}
-  <article>
+  <div>
     <h2>
       <a href="/blog{{ post.url }}">
         {{ post.title }}
       </a>
     </h2>
-    <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
-  </article>
+  </div>
+  <div>
+    {{ post.excerpt }}
+    <br>
+    <i style="margin-left: 80%; font-size: 13px;">
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date_to_long_string }}</time>
+    </i>
+  </div>
 {% endfor %}
