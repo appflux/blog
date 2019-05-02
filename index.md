@@ -8,7 +8,7 @@ layout: default
 {% for post in site.posts %}
   <div>
     <h2>
-      <a href="/blog{{ post.url }}">
+      <a href="{{ post.url }}">
         {{ post.title }}
       </a>
     </h2>
