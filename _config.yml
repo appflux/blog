@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Appflux is developer friendly exception notifications and messaging
+title: Appflux Tech Blog
 email: dev@appflux.io
 description: >- # this means to ignore newlines until "baseurl:"
   Sunday afternoon musings on programming and humans
@@ -28,8 +28,7 @@ show_excerpts: true
 # Build settings
 markdown: kramdown
 theme: minima
-disqus:
-  shortname: appflux
+disqus: appflux
 plugins:
   - jekyll-feed
 
