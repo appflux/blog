@@ -67,7 +67,7 @@ this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your pag
 
 (function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
-s.src = 'https://appflux.disqus.com/embed.js';
+s.src = '//appflux.disqus.com/embed.js';
 s.setAttribute('data-timestamp', + new Date());
 (d.head || d.body).appendChild(s);
 })();
