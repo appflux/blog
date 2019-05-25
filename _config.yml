@@ -29,7 +29,7 @@ show_excerpts: true
 markdown: kramdown
 theme: minima
 disqus:
-    shortname: my_disqus_shortname
+  shortname: appflux
 plugins:
   - jekyll-feed
 
