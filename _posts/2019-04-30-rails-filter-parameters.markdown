@@ -1,21 +1,13 @@
 ---
 layout: post
 comments: true
-title:  "Secure logging in Rails"
+title:  "Secure Logging in Rails"
 date:   2019-04-30 12:49:57 +0530
 category: rails
 tag: rails-security
 author: shubham
 excerpt: 'Facebook is probing a series of security failures in which employees built applications that logged unencrypted password data for Facebook users and stored it in plain text on internal company servers. Very similar incidents have struck Twitter, Github and many others in the past.'
 ---
-{% assign author = site.data.authors[page.author] %}
-
-# {{ page.title }}
-<span style="margin-left: 10px; font-size: 15px;">
-  Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
-  in {{ page.tag }}
-  on <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_long_string }}</time>
-</span>
 
 Facebook is <a href="https://krebsonsecurity.com/2019/03/facebook-stored-hundreds-of-millions-of-user-passwords-in-plain-text-for-years/">probing</a> a series of security failures in which employees built applications that logged unencrypted password data for Facebook users and stored it in plain text on internal company servers. Very similar incidents have struck <a href="https://www.theverge.com/2018/5/3/17316684/twitter-password-bug-security-flaw-exposed-change-now">Twitter</a>, <a href="https://www.theinquirer.net/inquirer/news/3031566/github-bug-exposed-user-passwords-in-plaintext">Github</a> and <a href="https://plaintextoffenders.com/">many others</a> in the past.
 
