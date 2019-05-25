@@ -61,7 +61,7 @@ Stay safe. For the night is long and full of terrors!
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 
 var disqus_config = function () {
-this.page.url = 'https://blog.appflux.io';  // Replace PAGE_URL with your page's canonical URL variable
+this.page.url = 'blog.appflux.io';  // Replace PAGE_URL with your page's canonical URL variable
 this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
