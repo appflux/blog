@@ -2,7 +2,8 @@
 layout: default
 title:  "A real-world usage of ActionText"
 date:   2019-04-29 16:43:57 +0530
-categories: rails
+category: Web
+tags: [Rails 6, ActionText]
 published: false
 ---
 

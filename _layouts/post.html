@@ -19,9 +19,9 @@ layout: default
     {% endif %}
     <div class="post-tags">
       {% if post %}
-        {% assign categories = post.categories %}
+        {% assign categories = post.tags %}
       {% else %}
-        {% assign categories = page.categories %}
+        {% assign categories = page.tags %}
       {% endif %}
       {% for category in categories %}
         <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
@@ -31,12 +31,6 @@ layout: default
   </div>
 
   {% assign author = site.data.authors[page.author] %}
-
-  <span style="margin-left: 10px; font-size: 15px;">
-    Written by <a href="{{ author.web }}" target="_blank">{{ author.name }}</a>
-    in {{ page.tag }}
-    on <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date_to_long_string }}</time>
-  </span>
 
   <div class="entry">
     {{ content }}

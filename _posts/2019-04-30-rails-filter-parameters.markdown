@@ -3,8 +3,8 @@ layout: post
 comments: true
 title:  "Secure Logging in Rails"
 date:   2019-04-30 12:49:57 +0530
-category: rails
-tag: rails-security
+category: Web
+tags: [Rails, Security]
 author: shubham
 excerpt: 'Facebook is probing a series of security failures in which employees built applications that logged unencrypted password data for Facebook users and stored it in plain text on internal company servers. Very similar incidents have struck Twitter, Github and many others in the past.'
 ---

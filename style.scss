@@ -614,7 +614,6 @@ Modules - reusable parts of our design
 }
 
 .post-tags {
-  text-align: center;
   line-height: 35px;
 }
 
@@ -622,8 +621,7 @@ Modules - reusable parts of our design
   font-size: 14.5px;
   padding: 2px 13px;
   border: none;
-  background-color: #4CAF50;
-  border-radius: 50px;
+  background-color: $sk-blue;
   color: #fff;
 }
 
