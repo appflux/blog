@@ -12,7 +12,7 @@ This is part 1 of our Rails 6 series specifically aimed at multiple database sup
 
 <h1>Overview</h1>
 
-Rails has always been infamous for being slow. To the point that there once lived a website <a href="https://www.reddit.com/r/ruby/comments/71nlq/httprailscantscalecom/" target="_blank">railscanscale.com</a>. One of the major focus areas of Rails 6 was to be scalable by default and the core team introduced several interesting features to make it possible. In this series we'll discuss how Rails 6 supports multiple databases, be it for adding more read-only databases or for connecting to multiple databases at the model level.
+Rails has always been infamous for being slow. To the point that there once lived a website <a href="https://www.reddit.com/r/ruby/comments/71nlq/httprailscantscalecom/" target="_blank">railscantscale.com</a>. One of the major focus areas of Rails 6 was to be scalable by default and the core team introduced several interesting features to make it possible. In this series we'll discuss how Rails 6 supports multiple databases, be it for adding more read-only databases or for connecting to multiple databases at the model level.
 
 Large applications often interact with multiple databases apart from the primary database. These databases can be a read-replica, or several entirely different databases that stores some of the data that the application needs to access. To do this, Rails did three things:
 
@@ -61,7 +61,7 @@ Once you have declared the databases you want to connect to in database.yml, you
   end
 {% endhighlight %}
 
-Here we specify connection information for individual models. *User* model will connect to *primary* database for writing and *primary_replica* for reading while the *Cat* with use a separate *animals* database because there simply are too many cats out there. This has no default implications as all your queries (read or write) will go to the *writing* database by default. Rails doesn't automagically send read queries to the *reading* database. To route our read queries to `primary_replica` (*reading* database, we have to explicitly connect to it at the time of calling. This is done by wrapping the queries in a `connected_to` block.
+Here we specify connection information for individual models. *User* model will connect to *primary* database for writing and *primary_replica* for reading while the *Cat* will use a separate *animals* database because there simply are too many cats out there. This has no default implications as all your queries (read or write) will go to the *writing* database by default. Rails doesn't automagically send read queries to the *reading* database. To route our read queries to `primary_replica` (*reading* database, we have to explicitly connect to it at the time of calling. This is done by wrapping the queries in a `connected_to` block.
 
 ## connected_to
 
@@ -74,7 +74,7 @@ Here we specify connection information for individual models. *User* model will 
 
 > Here, for counting Cats AR will use the `animals` DB and for counting Users, it will use the `primary_replica`.
 
-Now, this is a real problem if you have to do this explicitly everywhere in your application. AR does provide a way to by default connect to the *reading* role if the request type is GET or HEAD. However, if you are doing some INSERTs or UPDATEs in GETs or HEADs, you'll have to be careful to put them in a `connected_to` block. This again is not very optimal. We'll discuss about these in our next post.
+Now, this is a real problem if you have to do this explicitly everywhere in your application. AR does provide a way to by default connect to the *reading* role if the request type is GET or HEAD. However, if you are doing some INSERTs or UPDATEs in GETs or HEADs, you'll have to be careful to put them in a `connected_to` block. This again is not very optimal, but we'll discuss about these approaches in our next post.
 
 ## A few things that it doesn't support yet
 
