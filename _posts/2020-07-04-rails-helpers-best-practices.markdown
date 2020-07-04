@@ -100,3 +100,7 @@ end
 
 With great power comes great responsibility, and Rails helpers are no exception. They are expressive tools but also come with drawbacks. We are generally more inclined towards decorators and restrict their usage to very specific use cases only. If you follow above tips, maintaining helpers in long term should be a little easier.
 
+# **And, Your mandatory cat pic !!**
+
+<img src="/cat-1.jpeg" style="width: 100%">
+
